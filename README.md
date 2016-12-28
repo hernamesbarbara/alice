@@ -1,4 +1,5 @@
 Run it 
 
-```python alice.py
+```
+python alice.py
 ```
