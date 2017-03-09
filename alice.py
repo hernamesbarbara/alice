@@ -3,10 +3,17 @@
 """alice.py
 """
 from string import punctuation
-from nltk.corpus import stopwords
+
 # set stopwords to the built in list from nltk
 # check for them in your count_words func to rm stop words w/ little lexical diversity
-STOP_WORDS = set(stopwords.words('english'))
+
+try:
+    from nltk.corpus import stopwords
+    STOP_WORDS = set(stopwords.words('english'))
+except:
+    nltk.download('stopwords')
+    from nltk.corpus import stopwords
+    STOP_WORDS = set(stopwords.words('english'))
 
 def count_words(txt_or_file):
     try:
