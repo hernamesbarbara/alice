@@ -3,7 +3,7 @@
 """alice.py
 """
 from string import punctuation
-
+import nltk
 # set stopwords to the built in list from nltk
 # check for them in your count_words func to rm stop words w/ little lexical diversity
 
